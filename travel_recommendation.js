@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const links = document.querySelectorAll('nav ul li a');
   const root = document.getElementById('root');
+  const searchBar = document.getElementById('searchBar')
 
   function loadPage(page) {
     fetch(`pages/${page}.html`)
@@ -20,15 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
     switch (page) {
       case 'Home':
         title = "Home - Maui Travels";
+        searchBar.style.visibility = 'visible';
         break;
       case 'AboutUs':
         title = "About Us - Maui Travels";
+        searchBar.style.visibility = 'hidden';
         break;
       case 'ContactUs':
         title = "Contact - Maui Travels";
+        searchBar.style.visibility = 'hidden';
         break;
       default:
         title = "Maui Travels";
+        searchBar.style.visibility = 'visible';
     }
     document.title = title;
   }
@@ -65,7 +70,8 @@ async function fetchRecommendations() {
   }
 }
 
-function search() {
+function search(event) {
+  event.preventDefault();
   const input = document.getElementById('searchInput').value.toLowerCase();
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = '';

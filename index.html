@@ -22,7 +22,7 @@
           <li><a href="#contact-us" data-page="ContactUs">Contact Us</a></li>
         </ul>
       </nav>
-      <form class="search-bar" onsubmit="search()">
+      <form id="searchBar" class="search-bar" onsubmit="search(event)">
         <input id="searchInput" placeholder="Search..." type="text"/>
         <img src="static/magnifier.svg" alt="Magnifying glass">
         <button type="submit">Search</button>
@@ -35,12 +35,12 @@
       <img src="static/instagram.svg" alt="Instagram logo"/>
       <img src="static/youtube.svg" alt="Youtube logo"/>
     </aside>
-    <main id="root">
-      <!-- Content will be loaded here -->
-    </main>
     <div class="results" id="results">
       <!-- Search results will be displayed here -->
     </div>
+    <main id="root">
+      <!-- Content will be loaded here -->
+    </main>
     <script src="travel_recommendation.js"></script>
   </body>
 </html>
