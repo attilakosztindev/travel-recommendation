@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel Recommendation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img class="logo" src="static/logo.png" alt="logo"/>
+        <h5 class="logo-title">Maui Travels</h5>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" data-page="Home">Home</a></li>
+          <li><a href="#about-us" data-page="AboutUs">About Us</a></li>
+          <li><a href="#contact-us" data-page="ContactUs">Contact Us</a></li>
+        </ul>
+      </nav>
+      <form class="search-bar" onsubmit="search()">
+        <input id="searchInput" placeholder="Search..." type="text"/>
+        <img src="static/magnifier.svg" alt="Magnifying glass">
+        <button type="submit">Search</button>
+        <button type="reset" onclick="clearInput()">Clear</button>
+      </form>
+    </header>
+    <aside class="social-media">
+      <img src="static/twitter.svg" alt="Twitter logo"/>
+      <img src="static/facebook.svg" alt="Facebook logo"/>
+      <img src="static/instagram.svg" alt="Instagram logo"/>
+      <img src="static/youtube.svg" alt="Youtube logo"/>
+    </aside>
+    <main id="root">
+      <!-- Content will be loaded here -->
+    </main>
+    <div class="results" id="results">
+      <!-- Search results will be displayed here -->
+    </div>
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>
